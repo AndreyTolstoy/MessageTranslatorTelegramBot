@@ -6,7 +6,7 @@ import re
 
 logging.basicConfig(level=logging.INFO)
 
-# Инициализация бота
+#initialization of the bot
 bot = Bot(token=config.TOKEN)
 dp = Dispatcher(bot)
 
@@ -199,10 +199,10 @@ async def main(message: types.Message):
          
 
 
-# Перевод с английского на латинский
+#translation from English into the specified one
          translated_text = GoogleTranslator(source='auto', target=target_language).translate(translate_text)
 
-# Вывод переведенного текста
+#output of the translated text
          print("Translated Text:", translated_text) 
          await bot.send_message(message.chat.id, translated_text, reply_to_message_id=message.message_id)
 
